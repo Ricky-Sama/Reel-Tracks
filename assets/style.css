@@ -23,12 +23,20 @@ img {
     border-radius: 50px;
 }
 
-.with-background {
-    /* Set the background image URL */
+
+.background-container {
+    position: relative; /* Set position to allow absolute positioning */
+    height: 100vh;
     background-image: url('images/oppenheimer.jpg');
-    
-    /* Set background properties */
-    background-size: cover; /* Adjust the size as needed */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+.centered-container {
+    position: absolute; /* Position the container absolutely within the background */
+    top: 0; /* Position from the top edge of the parent */
+    left: 0; /* Position from the left edge of the parent */
+    right: 0; /* Position from the right edge of the parent */
+    bottom: 0; /* Position from the bottom edge of the parent */
+  }
