@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
+} */
 
 body {
     font-family: 'Inter', sans-serif; 
@@ -17,4 +17,18 @@ a {
 img {
     width: 100%;
     display: block;
+}
+
+.rounded{
+    border-radius: 50px;
+}
+
+.with-background {
+    /* Set the background image URL */
+    background-image: url('images/oppenheimer.jpg');
+    
+    /* Set background properties */
+    background-size: cover; /* Adjust the size as needed */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
 }
