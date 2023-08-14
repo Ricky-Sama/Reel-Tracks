@@ -1,24 +1,3 @@
-const apiKey = '3497cfa';
-async function getMovieData(movieTitle) {
-  const url = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${apiKey}`;
-  const res = await fetch(`${url}`);
-  const data = await res.json();
-  // console.log(data.Search);
-  //if(data.Response == "True") displayMovieList(data.Search);
-
-    
-  //If error occurs trying to fetch API
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      console.error('Error fetching movie data:', error);
-      return error;
-    }
-}
-
- 
     // https://www.omdbapi.com/?s=thor&page=1&apikey=3497cfa
 
 /*
@@ -51,3 +30,76 @@ When 'search' button is clicked:
     Call whenSearchButtonClicked()
 
 */
+const movieSearchBox = document.getElementById('form-control-box');
+const searchList = document.getElementById('form-list');
+const resultGrid = document.getElementById('result-output');
+
+const apiKey = '3497cfa';
+
+async function getMovieData(movieTitle) {
+    const url = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${apiKey}`;
+    
+    try {
+        const response = await fetch(url);
+    
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+    
+        const data = await response.json();
+    
+        if (data.Response === "True") {
+            return data.Search;
+        } else {
+            throw new Error('API response indicates an error');
+        }
+    } catch (error) {
+        console.error('Error fetching movie data:', error);
+        return null; // Return null to indicate error
+    }
+}
+
+function displayMovieDetails(details) {
+    resultGrid.innerHTML = `
+    <div class="movie-poster">
+        <img src="${(details.Poster != "N/A") ? details.Poster : "image_not_found.png"}" alt="movie poster">
+    </div>
+    <div class="movie-info">
+        <h3 class="movie-title">${details.Title}</h3>
+        <ul class="movie-misc-info">
+            <li class="year">Year: ${details.Year}</li>
+            <li class="rated">Ratings: ${details.Rated}</li>
+            <li class="released">Released: ${details.Released}</li>
+        </ul>
+        <p class="genre"><b>Genre:</b> ${details.Genre}</p>
+        <p class="writer"><b>Writer:</b> ${details.Writer}</p>
+        <p class="actors"><b>Actors:</b> ${details.Actors}</p>
+        <p class="plot"><b>Plot:</b> ${details.Plot}</p>
+        <p class="language"><b>Language:</b> ${details.Language}</p>
+        <p class="awards"><b><i class="fas fa-award"></i></b> ${details.Awards}</p>
+    </div>
+    `;
+}
+
+// Example usage
+async function searchAndDisplayMovies() {
+    const searchQuery = 'interstellar';
+
+    try {
+        const movieList = await getMovieData(searchQuery);
+
+        if (movieList !== null && movieList.length > 0) {
+            const firstMovie = movieList[0];
+            displayMovieDetails(firstMovie);
+        } else {
+            console.log('No movies found.');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        // Handle the error gracefully
+    }
+}
+
+// Call the function to start the process
+searchAndDisplayMovies();
+
