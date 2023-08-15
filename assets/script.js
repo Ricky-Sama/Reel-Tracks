@@ -82,11 +82,10 @@ function displayMovieDetails(details) {
 }
 
 // Example usage
-async function searchAndDisplayMovies() {
-    const searchQuery = 'interstellar';
-
+async function searchAndDisplayMovies(movieTitle) {
+    
     try {
-        const movieList = await getMovieData(searchQuery);
+        const movieList = await getMovieData(movieTitle);
 
         if (movieList !== null && movieList.length > 0) {
             const firstMovie = movieList[0];
@@ -105,7 +104,7 @@ searchAndDisplayMovies();
 
 
 // Event listener for search button
-document.getElementById('search').addEventListener('click', function(){
-    const movieTitle = document.getElementById('form-control-box').value;
-        getMovieData(movieTitle)
+document.getElementById('search-btn').addEventListener('click', function(){
+    const movieTitle = movieSearchBox.value;
+    searchAndDisplayMovies(movieTitle);
 });
