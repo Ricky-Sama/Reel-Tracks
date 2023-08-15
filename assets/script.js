@@ -103,3 +103,9 @@ async function searchAndDisplayMovies() {
 // Call the function to start the process
 searchAndDisplayMovies();
 
+
+// Event listener for search button
+document.getElementById('search').addEventListener('click', function(){
+    const movieTitle = document.getElementById('form-control-box').value;
+        getMovieData(movieTitle)
+});
