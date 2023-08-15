@@ -27,7 +27,7 @@ img {
 .background-container {
     position: relative; /* Set position to allow absolute positioning */
     height: 100vh;
-    background-image: url('images/oppenheimer.jpg');
+    background-image: url('./images/film-reel.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
