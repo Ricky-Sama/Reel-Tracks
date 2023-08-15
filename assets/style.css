@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+@font-face {
+    font-family: 'Nexa';
+    src: url(Fonts/Nexa-Trial-Regular.ttf) format('truetype');
+    font-family: 'NexaBold'
+}
+@font-face {
+    font-family: NexaBold;
+    src: url(Fonts/Nexa-Trial-Bold.ttf) format('truetype')
+}
+/@font-face {
+    font-family: 'NexaLight';
+    src: url(Fonts/Nexa-Trial-Light.ttf) format('truetype');
+}
 /* * {
     padding: 0;
     margin: 0;
@@ -7,7 +19,7 @@
 } */
 
 body {
-    font-family: 'Inter', sans-serif; 
+    font-family: 'NexaBold'
 }
 
 a {

@@ -12,20 +12,22 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
+    <!--<video  muted autoplay loop src="Reel-Tracks.mp4" width="500" height="500"></video> //added this video I made for maybe a Dynamic Header -->
 
     <!-- Header moved to own section. can possibly make buttons -->
-    <header class="text-center text-white bg-black mt-7">
+    <header class="text-center text-white bg-dark mt-7">
         <strong>ReelTracks</strong>
         <subheader class="navbar navbar-expand-md navbar-dark bd-navbar">
-            <div class="col-sm-6 col-md-6"> Movies </div>
-            <div class="col-sm-6 col-md-6"> Tracks</div> 
+            <!--added bg color and borders to our movie and track tabs GM-->
+            <div class="col-sm-6 col-md-6 p-6  bg-opacity-75 border border-0 border-primary btn btn-primary"> Movies </div>
+            <div class="col-sm-6 col-md-6 p-6  bg-opacity-75 border border-0 border-primary btn btn-primary"> Tracks</div> 
         </subheader>
     </header>
 
      <!-- moved => begin .search-container -->
         <div class="background-container">
             <div class="justify-content-center align-items-center centered-container"> 
-                <div id = "search" class="d-flex justify-content-center align-items-center form-control rounded">
+                <div id = "search" class="d-flex justify-content-center align-items-center form-control bg-dark border border-0 ">
                     <input type="text"  placeholder="search" id="form-control-box">
                     <button id="search-btn" class="btn btn-primary ms-2" type="button">Search</button>
                 </div>
