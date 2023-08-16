@@ -8,7 +8,7 @@
     font-family: NexaBold;
     src: url(Fonts/Nexa-Trial-Bold.ttf) format('truetype')
 }
-/@font-face {
+@font-face {
     font-family: 'NexaLight';
     src: url(Fonts/Nexa-Trial-Light.ttf) format('truetype');
 }
@@ -51,4 +51,24 @@ img {
     left: 0; /* Position from the left edge of the parent */
     right: 0; /* Position from the right edge of the parent */
     bottom: 0; /* Position from the bottom edge of the parent */
+  }
+
+  .movie-poster img{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+  }
+
+  .movie-info{
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+  .movie-info .year{
+    font-weight: 500;
+  }
+
+    .movie-misc-info{
+    list-style-type: none;
+    padding: 1rem;
   }
