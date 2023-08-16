@@ -8,7 +8,7 @@
     font-family: NexaBold;
     src: url(Fonts/Nexa-Trial-Bold.ttf) format('truetype')
 }
-/@font-face {
+@font-face {
     font-family: 'NexaLight';
     src: url(Fonts/Nexa-Trial-Light.ttf) format('truetype');
 }
@@ -27,8 +27,7 @@ a {
 }
 
 img {
-    width: 100%;
-    display: block;
+    display: inline-block;
 }
 
 .rounded{
@@ -51,4 +50,11 @@ img {
     left: 0; /* Position from the left edge of the parent */
     right: 0; /* Position from the right edge of the parent */
     bottom: 0; /* Position from the bottom edge of the parent */
+  }
+
+  input[type="text"],
+  textarea {
+
+  background-color: #FFFFFF;
+
   }
