@@ -36,6 +36,7 @@ const resultGrid = document.getElementById('result-output');
 
 const apiKey = '3497cfa';
 
+// fetch movie data from OMDb API
 async function getMovieData(movieTitle) {
     const url = `https://www.omdbapi.com/?s=${movieTitle}&apikey=${apiKey}`;
     
@@ -59,6 +60,7 @@ async function getMovieData(movieTitle) {
     }
 }
 
+// display movie details
 function displayMovieDetails(details) {
     resultGrid.innerHTML = `
     <div class="movie-poster">
@@ -81,30 +83,60 @@ function displayMovieDetails(details) {
     `;
 }
 
-// Example usage
-async function searchAndDisplayMovies(movieTitle) {
+// Fetch almbum details from Deezer - using JSONP
+function searchDeezerAlbums(movieTitle) {
+    return new Promise((resolve, reject) => {
+        const query = `${movieTitle} soundtrack`; // this adds 'soundtrack' to the users search for better searching
+        const script = document.createElement('script');
+        const jsonpCallBack = 'jsonp_callback_' + Math.round(100000 * Math.random());
+        window[jsonpCallBack] = (data) => {
+            delete window[jsonpCallBack];
+            document.body.removeChild(script);
+            resolve(data.data[0]); // Grabbing the first album search results
+        };
+
+        script.src = `https://api.deezer.com/search/album?q=${query}&output=jsonp&callback=${jsonpCallBack}`;
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+
+}
+
+// Display Deezer album details
+function displayDeezerAlbumDetails(album) {
+    resultGrid.innerHTML += `
+        <div class="album-cover">
+            <img src="${album.cover_medium}" alt="album cover">
+        </div>
+        <div class="album-info">
+            <h3 class="album-title">${album.title}</h3>
+            <p class="artist">${album.artist.name}</p>
+        </div>`
+}
+
+
+// main function to search and display
+async function searchAndDisplay(movieTitle) {
     
     try {
         const movieList = await getMovieData(movieTitle);
-
         if (movieList !== null && movieList.length > 0) {
             const firstMovie = movieList[0];
             displayMovieDetails(firstMovie);
-        } else {
-            console.log('No movies found.');
         }
+
+        const album = await searchDeezerAlbums(movieTitle);
+        if (album !== null) {
+            displayDeezerAlbumDetails(album);
+        }
+
     } catch (error) {
-        console.error('Error:', error);
-        // Handle the error gracefully
+        console.error(`Error:`, error);
     }
 }
-
-// Call the function to start the process
-searchAndDisplayMovies();
-
 
 // Event listener for search button
 document.getElementById('search-btn').addEventListener('click', function(){
     const movieTitle = movieSearchBox.value;
-    searchAndDisplayMovies(movieTitle);
+    searchAndDisplay(movieTitle);
 });
