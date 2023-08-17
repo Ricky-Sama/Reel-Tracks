@@ -27,8 +27,8 @@ Please click on the [link](https://ricky-sama.github.io/Reel-Tracks/) to visit t
 
 ## Credits
 
-  * [Kevin Rice] | Github : [DirtyRice901]
-  * [Ricardo Scuotto] | Github : [Ricky-Sama]
-  * [Gavin McNeil] | Github : [gavincmcneil]
-  * [Jesse Lare] | Github : [SideControlJS]
-  * [Shamar Melvin] | Github : [DonCod3]
+  * [Kevin Rice] | Github : [DirtyRice901](https://github.com/DirtyRice901)
+  * [Ricardo Scuotto] | Github : [Ricky-Sama](https://github.com/Ricky-Sama)
+  * [Gavin McNeil] | Github : [gavincmcneil](https://github.com/GavincMcNeil)
+  * [Jesse Lare] | Github : [SideControlJS](https://github.com/SideControlJS)
+  * [Shamar Melvin] | Github : [DonCod3](https://github.com/DonCod3)
