@@ -11,111 +11,41 @@
     <!-- custom css -->
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
-<body>
-    <!--<video  muted autoplay loop src="Reel-Tracks.mp4" width="500" height="500"></video> //added this video I made for maybe a Dynamic Header -->
 
+<body>    
     <!-- Header moved to own section. can possibly make buttons -->
     <div class="container-sm"></div>
         <video autoplay muted loop src="Reel-Animate-intro-fixed2.mp4" height="85%"  ></video>
-        <subheader class="navbar navbar-expand-md navbar-dark bd-navbar">
-            <!--added bg color and borders to our movie and track tabs GM-->
-            <!-- <div class="col-sm-6 col-md-6 p-6  bg-opacity-75 border border-0 border-primary btn btn-primary"> Movies </div>
-            <div class="col-sm-6 col-md-6 p-6  bg-opacity-75 border border-0 border-primary btn btn-primary"> Tracks</div>  -->
-        </subheader>
-    </header>
-
-     <!-- moved => begin .search-container -->
-        <div class="background-container">
-            <div class="justify-content-center align-items-center centered-container"> 
-                <div id = "search" class="d-flex justify-content-center align-items-center form-control bg-dark border border-0 ">
-                    <input type="text"  placeholder="search" id="form-control-box">
-                    <button id="search-btn" class="btn btn-primary ms-2" type="button">Search</button>
-                </div>
+        <subheader class="navbar navbar-expand-md navbar-dark bd-navbar"></subheader>        
+    
+     <!-- begin .search-container -->
+    <div class="background-container">
+        <div class="justify-content-center align-items-center centered-container"> 
+            <div id = "search" class="d-flex justify-content-center align-items-center form-control bg-dark border border-0 ">
+                <input type="text"  placeholder="search" id="form-control-box">
+                <button id="search-btn" class="btn btn-primary ms-2" type="button">Search</button>
             </div>
         </div>
-        
+    </div>
+    <!-- added wrapper to format webapp to center content for readability -->
     <div class="wrapper">
         <!-- begin .search-container -->
-               <div class="form-list" id="form-list">
-                <!-- list section -->
-
-
-                <div class="form-list-item">
-                    <!-- <div class="form-item-thumbnail">
-                        <img src="assets/images/oppenheimer.jpg">
-                    </div> -->
-                    <!-- <div class="form-item-info">
-
-                <div class="form-list-item">
-                    <div class="form-item-thumbnail"> -->
-                        <!-- <img src="assets/images/oppenheimer.jpg"> -->
-                    <!-- </div>
-
-                    <div class="form-item-info">
-
-                        <h2>Oppenheimer</h2>
-                        <p>2023</p>
-                    </div>
-                </div>
-               </div>
-            </div>
-        </div>
-        <!-- end of .search-container  -->
+        <div class="form-list" id="form-list">
+            <!-- list section -->
+        <!-- <div class="form-list-item">                     -->
+         <!-- end of .search-container   -->
 
         <!-- begin .result-container -->
-
         <div class="container">
             <div class="result-container">
                 <div class="result-output" id="result-output">
-                    <!-- movie information here -->
-                    <div class="movie-thumbnail">
-
-                        <img src="assets/images/oppenheimer.jpg" alt="movie movie thumbnail">
-                    </div>
-                    <div class="movie-info">
-                        <h2 class="movie-title">Oppenheimer</h2>
-                        <ul class="movie-main-info">
-                            <li class="year">Year: 2023</li>
-                            <li class="rated">Rated: R</li>
-                            <li class="released">Released: 21 July 2023</li>
-                        </ul>
-                        <p class="genre"><b>Genre:</b> Biography, Drama, History</p>
-                        <p class="plot"><b>Plot:</b> The story of American scientist, J. Robert Oppenheimer, and his role in the development of the atomic bomb.</p>
-                        <p class="director"><b>Director:</b> Christopher Nolan</p>
-                        <p class="writers"><b>Writers:</b> Christopher Nolan, Kai Bird, Martin Sherwin</p>
-                        <p class="stars"><b>Stars:</b> Cillian Murphy, Emily Blunt, Robert Downey Jr, Alden Ehrenreich, Scott Grimes, Jason Clarke, Kurt Koehler, Tony Goldwyn, John Gowans, Macon Blair, Gary Oldman,</p>
-                        <p class="language"><b>Language:</b> English</p>
-                        <p class="awards"><b>Awards:</b> 2023 Nominee HCA Award
-                            Most Anticipated Film, Golden Trailer Awards: 2023 Winner Best Of Show, 2023 Winner Truly Moving Picture Award
-                            Truly Moving Picture Award
-                            Christopher Nolan (director)</p>
-                        
-                    </div>
-                    <!-- Soundtrack info here -->
-                    <div class="movie-soundtrack">
-                        <img src="assets/images/296x296bb.webp" alt="movie soundtrack">
-                    </div>
-                    <div class="soundtrack-info">
-                        <div class="soundtrack-title">
-                            <h2>Oppenheimer</h2>
-                        </div>
-                        <ul class="soundtrack-main-info">
-                            <li class="year">Year: 2023</li>
-                            <li class="genre">Soundtrack</li>
-                        </ul>
-                        <p class="genre"><b>Genre:</b> Original Motion Picture Soundtrack</p>
-                        <p class="composer"><b>Composer:</b> Ludwing Göransson</p>
-                    </div> 
-                    <!-- Soundtrack section may require own container -->
-                </div>
-            </div> 
-        </div> 
+            </div>
+        </div>                                            
         <!-- end of .result-container -->
     </div>
 
-    <!--Movie App JS  -->
     <script src="./assets/script.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 </body>
+
 </html>
