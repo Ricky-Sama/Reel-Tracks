@@ -7,8 +7,8 @@ Search any movie and the results will show you the corresponding soundtrack.
 The goal of this project was to develop an app that allowed users to search for albums from their favorite movie.
 
 ## APIs 
-*OMDb API utilized to get movie details. https://www.omdbapi.com/
-*Deezer API utilized to get music details. https://developers.deezer.com/
+* OMDb API utilized to get movie details. https://www.omdbapi.com/
+* Deezer API utilized to get music details. https://developers.deezer.com/
 
 ## Usage
 
@@ -18,7 +18,7 @@ may not yield the correct results due to the variation of movie titles.
 The following image shows the web application's appearance and functionality:
 
     
-    ![Reel-Tracks screenshot](./assets/images/Reel-Tracks.png)
+![screenshot of app](./assets/images/Reel-Tracks.png)
     
 
 ## Application
