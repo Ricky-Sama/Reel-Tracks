@@ -53,22 +53,38 @@ img {
     bottom: 0; /* Position from the bottom edge of the parent */
   }
 
-  .movie-poster img{
+.movie-poster img{
     max-width: 400px;
     margin: 0 auto;
     border: 4px solid #fff;
   }
 
-  .movie-info{
+.movie-info{
     text-align: center;
     padding-top: 3rem;
   }
 
-  .movie-info .year{
+.movie-info .year{
     font-weight: 500;
   }
 
-  .movie-misc-info{
+.movie-misc-info{
     list-style-type: none;
     padding: 1rem;
   }
+
+.album-cover{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+  }
+
+.album-title{
+    text-align: center;
+    padding-top: 3rem;
+}  
+
+.artist{
+    text-align: center;
+    padding-top: 3rem;
+}
